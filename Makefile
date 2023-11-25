@@ -164,6 +164,7 @@ EMCC_FLAGS =\
   -sFILESYSTEM=0 \
   -sMODULARIZE=1 \
   -sALLOW_MEMORY_GROWTH\
+	-sNO_DYNAMIC_EXECUTION=1 \
   -sMAXIMUM_MEMORY=1GB \
   -std=c++20 \
   -fexperimental-library \
