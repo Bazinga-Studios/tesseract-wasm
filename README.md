@@ -2,6 +2,8 @@
 
 ![npm package](https://img.shields.io/npm/v/tesseract-wasm)
 
+This version allows you to Compile Tesseract-wasm without Dynamic Execution. Without this, emscripten will compile the Javascript with 'eval()' and 'new funciton()' which is not aloud in Chrome Extensions.
+
 A WebAssembly build of the [Tesseract](https://github.com/tesseract-ocr/tesseract)
 OCR engine for use in the browser and Node.
 
