@@ -23,7 +23,7 @@ export default [
     input: "src/index.ts",
     output: {
       dir: "dist",
-      entryFileNames: "lib.js",
+      entryFileNames: "lib.ts",
       format: "esm",
     },
     plugins: [

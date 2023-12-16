@@ -7,7 +7,7 @@ FALLBACK_INSTALL_DIR=$(INSTALL_DIR)/fallback
 DIST_TARGETS=\
   dist/tesseract-core.wasm \
 	dist/tesseract-core-fallback.wasm \
-	dist/lib.js \
+	dist/lib.ts \
 	dist/tesseract-worker.js
 
 .PHONY: lib
@@ -192,5 +192,5 @@ dist/tesseract-core-fallback.wasm: build/tesseract-core-fallback.wasm
 	mkdir -p dist/
 	cp $< $@
 
-dist/lib.js dist/tesseract-worker.js: src/*.ts build/tesseract-core.js build/tesseract-core.wasm build/tesseract-core-fallback.wasm
+dist/lib.ts dist/tesseract-worker.js: src/*.ts build/tesseract-core.js build/tesseract-core.wasm build/tesseract-core-fallback.wasm
 	node_modules/.bin/rollup -c rollup.config.js
